@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Install build tools
+      - name: Install Build Essentials
+        run: sudo apt-get install build-essential
+
+      # Build the C program
+      - name: Build
+        run: gcc -o test_add main.c
+
+      # Run the test
+      - name: Run Tests
+        run: ./test_add
