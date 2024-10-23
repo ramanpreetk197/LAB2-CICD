@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y build-essential
 WORKDIR /usr/src/app
 
 # Copy the source files to the container
-COPY add.c add.h test_add.c ./
+COPY main.c ./
 
 # Compile the program
-RUN gcc -o test_add test_add.c add.c
+RUN gcc -o test_add main.c
 
 # Run the compiled program
 CMD ["./test_add"]
