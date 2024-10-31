@@ -19,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Add test commands or scripts here
+                // Add test commands
             }
         }
     }
