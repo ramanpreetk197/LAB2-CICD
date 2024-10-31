@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Cloning the GitHub repository
-                git branch: 'main', url: 'https://github.com/ramanpreetk197/LAB2-CICD.git', credentialsId: 'GitHub_PAT'
+                git branch: 'main', url: 'https://github.com/ramanpreetk197/LAB2-CICD.git', credentialsId: 'GitHub_PAT12'
             }
         }
         stage('Build') {
